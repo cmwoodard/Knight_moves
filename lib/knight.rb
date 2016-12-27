@@ -114,18 +114,50 @@ end
 my_game = Game.new
 x = []
 y = []
+sx = nil
+sy = nil
+fx = nil
+fy = nil
 system("cls")
-puts "Enter two points for the knight to travel between\n\n"
-print "Starting X value [1-8]: "
-x.push(gets.chomp.to_i)
-print "Startpoint Y value [1-8]: "
-x.push(gets.chomp.to_i)
+puts "Enter two points for the knight to travel between:\n\n"
+
+while !(1..8).include?(sx)
+	print "Starting X value [1-8]: "
+	sx = gets.chomp.to_i
+	if !(1..8).include?(sx)
+		puts "Input not in range, try again."
+	end
+end
+x.push(sx)
+
+while !(1..8).include?(sy)
+	print "Starting Y value [1-8]: "
+	sy = gets.chomp.to_i
+	if !(1..8).include?(sy)
+		puts "Input not in range, try again."
+	end
+end
+	x.push(sy)
 
 
-print "End point X value [1-8]: "
-y.push(gets.chomp.to_i)
-print "End point Y value [1-8]: "
-y.push(gets.chomp.to_i)
+while !(1..8).include?(fx)
+	print "End point X value [1-8]: "
+	fx = gets.chomp.to_i
+	if !(1..8).include?(fx)
+		puts "Input not in range, try again."
+	end
+end
+y.push(fx)
+
+while !(1..8).include?(fy)
+	print "End point Y value [1-8]: "
+	fy = gets.chomp.to_i
+	if !(1..8).include?(fy)
+		puts "Input not in range, try again."
+	end
+end
+
+y.push(fy)
 my_game.knight_moves(x, y)
 gets
 #test_game.get_node([3,3]).possible_moves.each{|x| puts x.coordinate.inspect}
