@@ -125,4 +125,5 @@ y.push(gets.chomp.to_i)
 print "End point Y value: "
 y.push(gets.chomp.to_i)
 my_game.knight_moves(x, y)
+gets
 #test_game.get_node([3,3]).possible_moves.each{|x| puts x.coordinate.inspect}
