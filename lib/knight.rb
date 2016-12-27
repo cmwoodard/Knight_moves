@@ -115,16 +115,16 @@ my_game = Game.new
 x = []
 y = []
 system("cls")
-puts "Enter two points for the knight to travel between(board is 8x8)\n\n"
-print "Starting X value: "
+puts "Enter two points for the knight to travel between\n\n"
+print "Starting X value [1-8]: "
 x.push(gets.chomp.to_i)
-print "Startpoint Y value: "
+print "Startpoint Y value [1-8]: "
 x.push(gets.chomp.to_i)
 
 
-print "End point X value: "
+print "End point X value [1-8]: "
 y.push(gets.chomp.to_i)
-print "End point Y value: "
+print "End point Y value [1-8]: "
 y.push(gets.chomp.to_i)
 my_game.knight_moves(x, y)
 gets
