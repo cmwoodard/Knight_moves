@@ -114,6 +114,8 @@ end
 my_game = Game.new
 x = []
 y = []
+system("cls")
+puts "Enter two points for the knight to travel between(board is 8x8)\n\n"
 print "Starting X value: "
 x.push(gets.chomp.to_i)
 print "Startpoint Y value: "
